@@ -1,4 +1,13 @@
 output "instance_id" {
-  value = aws_instance.this.id
+  description = "EC2 instance ID"
+  value       = aws_instance.main.id
 }
 
+output "public_ip" {
+  description = "EC2 public IP"
+  value       = aws_instance.main.public_ip
+}
+
+output "instance_type" {
+  value = aws_instance.main.instance_type
+}
